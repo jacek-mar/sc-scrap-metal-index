@@ -1,0 +1,8 @@
+{"receiver":{"$numberLong":"1"}}
+{"receiver":{"$numberLong":"2"}}
+{"receiver":{"$numberLong":"1"}}
+{"receiver":{"$numberLong":"2"}}
+{"receiver":{"$numberLong":"2"}}
+{"receiver":{"$numberLong":"2"}}
+{"attachments":{"1":{"content":{"defName":"NewbieHarpy_Revard"}}},"receiver":{"$numberLong":"2"}}
+{"attachments":{"0":{"content":{"defName":"Bundle_Daily_Pvp_open"}},"1":{"content":{"defName":"Bundle_Daily_Raid_open"}},"2":{"content":{"defName":"Bundle_Daily_Pve_open"}},"3":{"content":{"defName":"Bundle_Iridium_Overseer_T4_1_open"}},"4":{"content":{"defName":"Bundle_Iridium_Overseer_T4_2_open"}}},"receiver":{"$numberLong":"1"}}

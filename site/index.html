@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'none'; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title data-i18n="text1">SC Scrap Metal Index · Unofficial item search</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="data/items.js"></script>
+  <script defer src="i18n.js"></script>
+  <script defer src="search.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <p class="eyebrow" data-i18n="text2">UNOFFICIAL COMMUNITY REFERENCE · v0.3</p>
+    <h1 data-i18n="text3">SC Scrap Metal Index</h1>
+    <p data-i18n="text4">Find an item. Copy its definition. See where to edit it, what uses it, and where the database stores it.</p>
+    <p data-i18n="text5">Unofficial Star Conflict reference · Hub 1.99.0.167293 · stock files</p>
+  </header>
+  <main>
+    <section aria-label="Search controls" data-i18n-aria-label="text6" class="controls">
+      <label class="query"><span data-i18n="text7">Name, defName or exact ID</span><input id="query" type="search" placeholder="Try Nebula GS, Кошмар Иерихона or 224" data-i18n-placeholder="text8" autocomplete="off"></label>
+      <label><span data-i18n="text9">Kind</span><select id="kind"><option value="" data-i18n="text10">All kinds</option></select></label>
+      <label><span data-i18n="text11">Name status</span><select id="status"><option value="" data-i18n="text12">All statuses</option></select></label>
+      <label><span data-i18n="language">Language</span><select id="lang"><option value="en" data-i18n="text64">English</option><option value="ru">Русский</option></select></label>
+      <label><span data-i18n="text14">Coverage</span><select id="scope"><option value="account" data-i18n="text15">Account items</option><option value="all" data-i18n="text16">All definitions</option></select></label>
+    </section>
+    <p><span data-i18n="text17">IDs use separate numbering systems. </span><strong data-i18n="text18">storeItemId is not unique</strong><span data-i18n="text19">; use kind + defName. Account scope does not mean an item is safe to grant.</span></p>
+    <p id="count" role="status" aria-live="polite" data-i18n="text20">Loading account items…</p>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="Search results, scroll horizontally for all columns" data-i18n-aria-label="text21">
+      <table><thead><tr><th data-i18n="text22">Label</th><th data-i18n="text23">defName</th><th data-i18n="text9">Kind</th><th data-i18n="text11">Name status</th><th data-i18n="text24">IDs: storeItemId / storeId / atlasId</th></tr></thead><tbody id="results"></tbody></table>
+    </div>
+    <button id="more" type="button" hidden data-i18n="text25">Show 200 more</button>
+    <p data-i18n="text26">Tab to an item, then Enter to open it. ↑ / ↓ moves between items. Escape closes details.</p>
+    <p><a href="../docs/using-the-search.md" data-doc="guide" data-i18n="text27">Search guide and Nebula GS example</a> · <a href="../data/items.csv" download data-i18n="text28">Account CSV</a> · <a href="../data/items_all.csv" download data-i18n="text29">All definitions CSV</a> · <a href="../docs/data-dictionary.md" data-doc="dictionary" data-i18n="text30">Data dictionary</a></p>
+  </main>
+  <dialog id="detail" aria-labelledby="detail-title">
+    <button id="close" type="button" data-i18n="text31">Close details (Esc)</button>
+    <h2 id="detail-title" data-i18n="text32">Item details</h2>
+    <div id="detail-body"></div>
+    <p id="copy-status" role="status"></p>
+  </dialog>
+  <footer>
+    <p data-i18n="text33">Unofficial community project, not affiliated with or endorsed by Gaijin or Targem.</p>
+    <p data-i18n="text34">Item names and descriptions are © Gaijin Entertainment / Targem Games, quoted as short identifying references.</p>
+    <p data-i18n="text35">Our code, documentation and compilation: CC0-1.0. Authors: jacek-mar / Hystrix.</p>
+    <p data-i18n="text36">Hub 1.99.0.167293 · stock files. Community configuration packs change files and are not reflected here. Database locations show where an item of each kind can be stored; they are not permission to grant it.</p>
+    <p><a href="https://github.com/jacek-mar/sc-server-under-the-hood" data-i18n="text37">Unofficial Star Conflict Server - Under the Hood</a> · <a href="https://github.com/jacek-mar/sc-scrap-metal-index" data-i18n="text38">Project repository</a> · <a href="../NOTICE.md" data-doc="notice" data-i18n="text39">Notices</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# never commit game data or local material
+.venv/
+__pycache__/
+*.pyc
+out/
+*.pak
+*.exe
+*.dll
+/real-data/
+
+# user private notes directory
+_user_notes/
+smi-build/

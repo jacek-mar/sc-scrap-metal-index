@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Unofficial SC Scrap Metal Index item array",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "defName",
+      "kind",
+      "name_en",
+      "name_ru",
+      "label_en",
+      "label_ru",
+      "name_status",
+      "short_desc_en",
+      "short_desc_ru",
+      "desc_status",
+      "desc_has_placeholders",
+      "race",
+      "rank",
+      "tier",
+      "storeItemId",
+      "storeId",
+      "atlasId",
+      "storeItemId_shared",
+      "account_scope",
+      "defined_in",
+      "db_fields",
+      "flags",
+      "race_en",
+      "race_ru"
+    ],
+    "properties": {
+      "defName": {
+        "type": "string",
+        "description": "Internal definition code. Primary identity together with kind; use it for lookup."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Registry item family, such as ship or module."
+      },
+      "name_en": {
+        "type": "string",
+        "description": "English identifying name; empty when unresolved."
+      },
+      "name_ru": {
+        "type": "string",
+        "description": "Russian identifying name; empty when unresolved."
+      },
+      "label_en": {
+        "type": "string",
+        "description": "English name with distinguishing tier, rank and variant parts; raw code when unnamed."
+      },
+      "label_ru": {
+        "type": "string",
+        "description": "Russian distinguishing display label; raw code when unnamed."
+      },
+      "name_status": {
+        "type": "string",
+        "description": "Trust vocabulary: exact (direct key), own_field (own definition field), prefixed (known key prefix), category (shared subtype), derived (our derivation), none (unresolved). Category and derived are not exact item titles.",
+        "enum": [
+          "exact",
+          "own_field",
+          "prefixed",
+          "category",
+          "derived",
+          "none"
+        ]
+      },
+      "short_desc_en": {
+        "type": "string",
+        "description": "English description, whitespace normalized, at most 200 Unicode characters, or empty. Own short description, own description, then category description. Long candidates are skipped. No lore.",
+        "maxLength": 200
+      },
+      "short_desc_ru": {
+        "type": "string",
+        "description": "Russian description selected independently with the same limit and fallback order.",
+        "maxLength": 200
+      },
+      "desc_status": {
+        "type": "string",
+        "description": "Same vocabulary as name_status. If language sources differ, the more general status wins: category, derived, prefixed, own_field, exact. none means both descriptions are empty. Per-language provenance is retained by the local build.",
+        "enum": [
+          "exact",
+          "own_field",
+          "prefixed",
+          "category",
+          "derived",
+          "none"
+        ]
+      },
+      "desc_has_placeholders": {
+        "type": "boolean",
+        "description": "Boolean: either description contains a raw $value$ placeholder. Values are never substituted."
+      },
+      "race": {
+        "type": "string",
+        "description": "Raw static race code, for example ai.Race.EMPIRE; empty if unavailable."
+      },
+      "rank": {
+        "type": [
+          "string",
+          "integer"
+        ],
+        "description": "Static numeric rank or empty; never inferred from tier."
+      },
+      "tier": {
+        "type": [
+          "string",
+          "integer"
+        ],
+        "description": "Static numeric tier or empty; never converted to rank."
+      },
+      "storeItemId": {
+        "type": [
+          "string",
+          "integer"
+        ],
+        "description": "Own definition ID or empty. NOT unique: lookup by kind and defName. Expressions and inherited IDs stay blank."
+      },
+      "storeId": {
+        "type": [
+          "string",
+          "integer"
+        ],
+        "description": "Store XML identifier or empty; a separate namespace from storeItemId."
+      },
+      "atlasId": {
+        "type": [
+          "string",
+          "integer"
+        ],
+        "description": "Atlas identifier or empty; a separate namespace from store and account instance IDs."
+      },
+      "storeItemId_shared": {
+        "type": "boolean",
+        "description": "Boolean: another row in the full registry shares this nonempty storeItemId; includes shared defaults and zero."
+      },
+      "account_scope": {
+        "type": "string",
+        "description": "account, npc_or_internal, or unknown. Main items files contain account only. unknown means scope is unestablished. Account classification does not prove grantability.",
+        "enum": [
+          "account",
+          "npc_or_internal",
+          "unknown"
+        ]
+      },
+      "defined_in": {
+        "type": "string",
+        "description": "Standard relative install location and physical line: star conflict\\data\\gamedata\\def\\ex\\ship.lua:26711. Resolve under your Steam installation."
+      },
+      "db_fields": {
+        "type": "array",
+        "description": "Database field paths where this item was seen in a sample database, e.g. cosmosim_<WinUser>.accounts.vessels[].defName. Only a confirmation: where an item of a kind CAN be stored is in data/db_by_kind.csv. Numeric sample attachment indices become <>.",
+        "items": {
+          "type": "string"
+        },
+        "uniqueItems": true
+      },
+      "flags": {
+        "type": "array",
+        "description": "Registry diagnostic code list, such as no_name or xml_only; retained independently of improved names.",
+        "items": {
+          "type": "string"
+        },
+        "uniqueItems": true
+      },
+      "race_en": {
+        "type": "string",
+        "description": "English race or group name from the game string tables (race_<CODE>), e.g. Empire; empty if the item has no race code."
+      },
+      "race_ru": {
+        "type": "string",
+        "description": "Russian race or group name from the game string tables, e.g. Империя."
+      }
+    }
+  }
+}

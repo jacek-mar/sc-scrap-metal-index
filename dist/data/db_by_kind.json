@@ -1,0 +1,189 @@
+[
+  {
+    "kind": "ship",
+    "database": "cosmosim_<WinUser>",
+    "collection": "accounts",
+    "field_path": "vessels[].defName",
+    "value_written": "defName; each ship also gets vessels[].vid (instance id from counters)",
+    "evidence": "S,D",
+    "mail": "",
+    "value_written_ru": "defName; каждый корабль также получает vessels[].vid (ID экземпляра из counters)",
+    "mail_ru": ""
+  },
+  {
+    "kind": "module",
+    "database": "cosmosim_<WinUser>",
+    "collection": "accounts",
+    "field_path": "items[].defName",
+    "value_written": "defName; plus items[].iid (instance id), amount",
+    "evidence": "S,D",
+    "mail": "mail type 5 LAT_ITEM: content.defName",
+    "value_written_ru": "defName; также items[].iid (ID экземпляра), amount",
+    "mail_ru": "почтовый тип 5 LAT_ITEM: content.defName"
+  },
+  {
+    "kind": "module",
+    "database": "cosmosim_<WinUser>",
+    "collection": "accounts",
+    "field_path": "vessels[].equipped[]",
+    "value_written": "the iid of an items[] entry when fitted, not the defName",
+    "evidence": "D",
+    "mail": "",
+    "value_written_ru": "iid записи items[] при установке, а не defName",
+    "mail_ru": ""
+  },
+  {
+    "kind": "weapon",
+    "database": "cosmosim_<WinUser>",
+    "collection": "accounts",
+    "field_path": "items[].defName",
+    "value_written": "defName; plus items[].iid (instance id), amount",
+    "evidence": "S,D",
+    "mail": "mail type 5 LAT_ITEM: content.defName",
+    "value_written_ru": "defName; также items[].iid (ID экземпляра), amount",
+    "mail_ru": "почтовый тип 5 LAT_ITEM: content.defName"
+  },
+  {
+    "kind": "weapon",
+    "database": "cosmosim_<WinUser>",
+    "collection": "accounts",
+    "field_path": "vessels[].equipped[]",
+    "value_written": "the iid of an items[] entry when fitted, not the defName",
+    "evidence": "D",
+    "mail": "",
+    "value_written_ru": "iid записи items[] при установке, а не defName",
+    "mail_ru": ""
+  },
+  {
+    "kind": "munition",
+    "database": "cosmosim_<WinUser>",
+    "collection": "accounts",
+    "field_path": "vessels[].munition[].def",
+    "value_written": "defName (the field is named def), amount",
+    "evidence": "S,D",
+    "mail": "mail type 5 LAT_ITEM (untested for munitions)",
+    "value_written_ru": "defName (поле называется def), amount",
+    "mail_ru": "почтовый тип 5 LAT_ITEM (для боеприпасов не проверен)"
+  },
+  {
+    "kind": "munition",
+    "database": "cosmosim_<WinUser>",
+    "collection": "accounts",
+    "field_path": "items[].defName",
+    "value_written": "in storage: defName, iid, amount; a second grant adds to the same entry",
+    "evidence": "D,L",
+    "mail": "",
+    "value_written_ru": "на складе: defName, iid, amount; повторная выдача увеличивает ту же запись",
+    "mail_ru": ""
+  },
+  {
+    "kind": "craft_part",
+    "database": "cosmosim_<WinUser>",
+    "collection": "accounts",
+    "field_path": "craftResources.<defName>",
+    "value_written": "the defName is the key; the value is the amount (CraftResource_Base parts)",
+    "evidence": "S,D,L",
+    "mail": "mail type 5 LAT_ITEM (untested)",
+    "value_written_ru": "defName — ключ; значение — количество (компоненты CraftResource_Base)",
+    "mail_ru": "почтовый тип 5 LAT_ITEM (не проверен)"
+  },
+  {
+    "kind": "resource",
+    "database": "cosmosim_<WinUser>",
+    "collection": "accounts",
+    "field_path": "craftResources.<defName>",
+    "value_written": "the defName is the key; the value is the amount (CraftResource_Base and craft resources, also blueprints)",
+    "evidence": "D,L",
+    "mail": "mail type 5 LAT_ITEM (untested)",
+    "value_written_ru": "defName — ключ; значение — количество (CraftResource_Base и ресурсы изготовления, включая чертежи)",
+    "mail_ru": "почтовый тип 5 LAT_ITEM (не проверен)"
+  },
+  {
+    "kind": "resource",
+    "database": "cosmosim_<WinUser>",
+    "collection": "accounts",
+    "field_path": "items[].defName",
+    "value_written": "unverified: junk (Junk_Base) resources; the give task refuses them",
+    "evidence": "D",
+    "mail": "",
+    "value_written_ru": "не проверено: мусорные ресурсы (Junk_Base); задача give отказывается их выдавать",
+    "mail_ru": ""
+  },
+  {
+    "kind": "account_aura",
+    "database": "cosmosim_<WinUser>",
+    "collection": "accounts",
+    "field_path": "auras[].defName",
+    "value_written": "defName, cntrLeft",
+    "evidence": "S,D",
+    "mail": "mail type 14 LAT_ACCOUNT_AURA: content.defName",
+    "value_written_ru": "defName, cntrLeft",
+    "mail_ru": "почтовый тип 14 LAT_ACCOUNT_AURA: content.defName"
+  },
+  {
+    "kind": "custom_element",
+    "database": "cosmosim_<WinUser>",
+    "collection": "accounts",
+    "field_path": "vessels[].customElements[].defName",
+    "value_written": "defName, till",
+    "evidence": "D",
+    "mail": "mail type 16 LAT_CUSTOM_ELEMENT: content.customElement",
+    "value_written_ru": "defName, till",
+    "mail_ru": "почтовый тип 16 LAT_CUSTOM_ELEMENT: content.customElement"
+  },
+  {
+    "kind": "custom_element",
+    "database": "cosmosim_<WinUser>",
+    "collection": "accounts",
+    "field_path": "freeVesselCustomElements.<name>",
+    "value_written": "not fitted to a ship: the element name is the key; the value is a count",
+    "evidence": "B,L",
+    "mail": "",
+    "value_written_ru": "не установлен на корабль: имя элемента — ключ; значение — количество",
+    "mail_ru": ""
+  },
+  {
+    "kind": "autogen",
+    "database": "cosmosim_<WinUser>",
+    "collection": "accounts",
+    "field_path": "autogenItems[]",
+    "value_written": "an instance: iid (from counters), upgradeLevel, rollData (number array), exp",
+    "evidence": "D,B,L",
+    "mail": "mail type 15 LAT_AUTOGEN: content.autogenItem",
+    "value_written_ru": "экземпляр: iid (из counters), upgradeLevel, rollData (массив чисел), exp",
+    "mail_ru": "почтовый тип 15 LAT_AUTOGEN: content.autogenItem"
+  },
+  {
+    "kind": "title",
+    "database": "cosmosim_<WinUser>",
+    "collection": "accounts",
+    "field_path": "acquiredTitles[].id",
+    "value_written": "the numeric title id from cloud/data/titles.xml, not a defName; the active title is the number in title (0 = none)",
+    "evidence": "B,L",
+    "mail": "mail type 11 LAT_TITLE: content.tid",
+    "value_written_ru": "числовой ID титула из cloud/data/titles.xml, а не defName; активный титул — число в title (0 = нет)",
+    "mail_ru": "почтовый тип 11 LAT_TITLE: content.tid"
+  },
+  {
+    "kind": "avatar",
+    "database": "cosmosim_<WinUser>",
+    "collection": "accounts",
+    "field_path": "acquiredAvatars.<defName>",
+    "value_written": "the defName is the key (value 1); the active avatar is the defName in avatar",
+    "evidence": "B,L",
+    "mail": "mail type 17 LAT_AVATAR: content.avatar",
+    "value_written_ru": "defName — ключ (значение 1); активный аватар — defName в avatar",
+    "mail_ru": "почтовый тип 17 LAT_AVATAR: content.avatar"
+  },
+  {
+    "kind": "bundle",
+    "database": "",
+    "collection": "",
+    "field_path": "",
+    "value_written": "not stored on the account; opened into its contents",
+    "evidence": "",
+    "mail": "bundles flagged can_be_sent_by_mail can be mailed",
+    "value_written_ru": "не хранится в учётной записи; раскрывается в содержимое",
+    "mail_ru": "наборы с признаком can_be_sent_by_mail можно отправлять по почте"
+  }
+]

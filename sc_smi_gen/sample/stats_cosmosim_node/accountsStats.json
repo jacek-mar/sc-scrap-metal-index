@@ -1,0 +1,4 @@
+{"uid":{"$numberLong":"1"}}
+{"uid":{"$numberLong":"2"}}
+{"uid":{"$numberLong":"3"}}
+{"bans":[{}],"chatMutes":[{}],"uid":{"$numberLong":"4"}}

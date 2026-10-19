@@ -1,0 +1,111 @@
+{
+  "build_id": "Hub 1.99.0.167293",
+  "generated_at": "2026-10-19T22:04:13.704661+00:00",
+  "files": {
+    "items.csv": {
+      "rows": 14973,
+      "by_kind": {
+        "account_aura": 397,
+        "craft_part": 182,
+        "custom_element": 1876,
+        "module": 7684,
+        "munition": 972,
+        "other": 42,
+        "resource": 1317,
+        "ship": 655,
+        "weapon": 1848
+      }
+    },
+    "items.json": {
+      "rows": 14973,
+      "by_kind": {
+        "account_aura": 397,
+        "craft_part": 182,
+        "custom_element": 1876,
+        "module": 7684,
+        "munition": 972,
+        "other": 42,
+        "resource": 1317,
+        "ship": 655,
+        "weapon": 1848
+      }
+    },
+    "items_all.csv": {
+      "rows": 19364,
+      "by_kind": {
+        "account_aura": 397,
+        "autogen": 75,
+        "avatar": 349,
+        "bundle": 792,
+        "craft_part": 182,
+        "custom_element": 1876,
+        "module": 7954,
+        "munition": 1011,
+        "other": 1348,
+        "resource": 1332,
+        "ship": 1610,
+        "title": 343,
+        "weapon": 2095
+      }
+    },
+    "items_all.json": {
+      "rows": 19364,
+      "by_kind": {
+        "account_aura": 397,
+        "autogen": 75,
+        "avatar": 349,
+        "bundle": 792,
+        "craft_part": 182,
+        "custom_element": 1876,
+        "module": 7954,
+        "munition": 1011,
+        "other": 1348,
+        "resource": 1332,
+        "ship": 1610,
+        "title": 343,
+        "weapon": 2095
+      }
+    },
+    "db_fields.csv": {
+      "rows": 27
+    },
+    "locations.json": {
+      "rows": 92786,
+      "by_group": {
+        "edit_here": 18582,
+        "generated": 32264,
+        "inert": 1319,
+        "server_rules": 1335,
+        "used_by": 39286
+      }
+    },
+    "locations.csv": {
+      "rows": 92786,
+      "by_group": {
+        "edit_here": 18582,
+        "generated": 32264,
+        "inert": 1319,
+        "server_rules": 1335,
+        "used_by": 39286
+      }
+    },
+    "db_by_kind.json": {
+      "rows": 17
+    },
+    "db_by_kind.csv": {
+      "rows": 17
+    }
+  },
+  "sha256": {
+    "db_by_kind.csv": "b1d7206d9007b79a2d938641cac2f7d6d8a26dd952a5e94c10598005ade6644c",
+    "db_by_kind.json": "8ef1ce149457bab36da890a722f32e0e6f7650c3cb0ef5031cc78289eed7504d",
+    "db_fields.csv": "444a73f3c61a6bddd326de0485e4971258a7259195b84e9d5f5e6fbeddad9ab6",
+    "items.csv": "2e25545cb0c82b4809ebe31acbe28db53031c71f625a5a39f803a612bc197aa7",
+    "items.json": "0ce4f2d43da46253b2a7eedea4de0d5b8eb03927bc88b76995891ac0702381a7",
+    "items_all.csv": "5cf4c72868c8e7272c46c30e48cd4341b9f9f0ac5a1222f92426e3694aebb081",
+    "items_all.json": "82d54761b1da26010f3d929f5f7b8fd84b9d5790d012e176ebcd5b24db288bd6",
+    "locations.csv": "f2f3b3b3bf25b3a606c7cfc81503e9244a98d6bb7276d413d5bd3d629a379d92",
+    "locations.json": "9289b307c829b2eb70f11d5e1509d9f7f6a560db4b4b8ceb40410510918b414a",
+    "schema.json": "0a7eb01df711a853a47ac64cfbaae7a9348f6e1b6ca0fbbdc794f4bd2eeb3073"
+  }
+}
